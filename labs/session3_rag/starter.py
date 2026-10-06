@@ -14,8 +14,8 @@ def chunk_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) 
     return chunks
 
 
-def load_handbook(path: Path) -> list[str]:
-    return chunk_text(path.read_text())
+def load_handbook(path: Path, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
+    return chunk_text(path.read_text(), size, overlap)
 
 
 # TODO(trainee): embed the chunks and implement search(query, k=5)
