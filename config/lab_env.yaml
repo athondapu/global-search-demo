@@ -1,0 +1,14 @@
+# Shared lab environment settings. Changes need a review from platform (Ravi Menon).
+seats:
+  pool_size: 40          # total seats shared by all running cohorts
+  per_trainee: 1
+  reserve_for_trainers: 4
+
+tokens:
+  lifetime_days: 14      # lab API tokens expire after two weeks
+  warn_before_days: 2
+
+image:
+  name: ghcr.io/lumen-labs/lab-env
+  tag: "2.3.1"
+  platforms: [linux/amd64]

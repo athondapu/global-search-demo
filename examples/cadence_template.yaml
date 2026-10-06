@@ -1,0 +1,12 @@
+# Example cadence template for Session 2. Validate with: uv run lab validate examples/cadence_template.yaml
+name: onboarding-follow-up
+steps:
+  - stage: welcome
+    wait_hours: 0
+    prompt: Greet the new user and summarise what the assistant can help with.
+  - stage: check-in
+    wait_hours: 48
+    prompt: Ask whether the first task worked and offer one tip based on their last question.
+  - stage: wrap-up
+    wait_hours: 168
+    prompt: Summarise progress and suggest the next module.
